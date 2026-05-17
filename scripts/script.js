@@ -3,6 +3,11 @@ let previousCount = "";
 const coffeeCounter = document.getElementById("coffeeCount");
 const previousCoffeeCount = document.getElementById("previousCoffeeCount");
 
+// add event listeners to buttons
+document.getElementById("incrementButton").addEventListener("click", drinkCoffee);
+document.getElementById("decrementButton").addEventListener("click", cancelCoffee);
+document.getElementById("saveCoffees").addEventListener("click", saveCoffees);
+
 function drinkCoffee() {
     coffeeCount++;
     coffeeCounter.textContent = coffeeCount;
